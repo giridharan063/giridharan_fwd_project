@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>Ticket Booking</title>
+ <style>
+ body {
+ font-family: Arial, sans-serif;
+ margin: 0;
+ padding: 0;
+ background-color: #f4f4f4;
+ }
+ header {
+ background-color: #333;
+ color: white;
+ text-align: center;
+ padding: 1rem;
+ }
+ .container {
+ max-width: 800px;
+ margin: 2rem auto;
+ background-color: white;
+ padding: 2rem;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+7
+ border
+-radius: 10px;
+ 
+}
+ h2 {
+ color: #333;
+ 
+}
+ label {
+ display: block;
+ margin: 0.5rem 0;
+ color: #555;
+ 
+}
+ input, select {
+ width: 100%;
+ padding: 0.5rem;
+ margin: 0.5rem 0;
+ border: 1px solid #ddd;
+ border
+-radius: 5px;
+ 
+}
+ .cta {
+ background
+-color: #28a745;
+ color: white;
+ border: none;
+ padding: 0.8rem 1.5rem;
+ border
+-radius: 5px;
+ cursor: pointer;
+ text
+-transform: uppercase;
+ text
+-align: center;
+ margin: 1rem auto;
+ transition: background
+-color 0.3s;
+6
+7
+ }
+ .cta:hover {
+ background-color: #218838;
+ }
+ footer {
+ background-color: #333;
+ color: white;
+ text-align: center;
+ padding: 1rem;
+ }
+ </style>
+</head>
+<body>
+ <!-- Header Section -->
+ <header>
+ <h1>Ticket Booking</h1>
+ </header>
+ <!-- Main Booking Form -->
+ <div class="container">
+ <h2>Book Your Ticket</h2>
+ <form action="/submit" method="POST"> <!-- POST method is common for form submission -->
+ <!-- Event Selection -->
+ <label for="event">Event</label>
+ <select id="event" name="event" required>
+ <option value="concert">Concert</option>
+ <option value="theater">Theater</option>
+ <option value="movie">Movie</option>
+7
+ </select>
+ <!-- Date Selection -->
+ <label for="date">Date</label>
+ <input type="date" id="date" name="date" required>
+ <!-- Seat Selection -->
+ <label for="seat">Preferred Seat</label>
+ <select id="seat" name="seat" required>
+ <option value="front">Front</option>
+ <option value="middle">Middle</option>
+ <option value="back">Back</option>
+ </select>
+ <!-- User Information -->
+ <label for="name">Your Name</label>
+ <input type="text" id="name" name="name" placeholder="John Doe" required>
+ <label for="email">Email</label>
+ <input type="email" id="email" name="email" placeholder="example@example.com" required>
+ <label for="phone">Phone Number</label>
+ <input type="text" id="phone" name="phone" placeholder="123-456-7890" required>
+ <!-- Payment Information -->
+ <h3>Payment Information</h3>
+ <label for="card">Credit Card Number</label>
+ <input type="text" id="card" name="card" placeholder="1234 5678 9101 1121" required>
+8
+7
+ <!-- Submit Button -->
+ <div style="text-align: center;">
+ <button class="cta" type="submit">Book Now</button>
+ </div>
+ </form>
+ </div>
+ <!-- Footer Section -->
+ <footer>
+ <p>&copy; 2024 Ticket Booking Company. All rights reserved.</p>
+ </footer>
+</body>
+</html>
